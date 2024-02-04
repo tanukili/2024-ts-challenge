@@ -9,6 +9,10 @@
  */
 export function formatDate(date: Date): string {
     // 請在此處寫下你的程式碼
+    // 當是個位數的時候，需要用字串方法在前方填充 "0"
+    const monthStr: string = (date.getMonth() + 1).toString().padStart(2, '0');
+    const dateStr: string = (date.getDate()).toString().padStart(2, '0');
+    return `${date.getFullYear()}-${monthStr}-${dateStr}`
 }
 
 /**
@@ -22,4 +26,5 @@ export function formatDate(date: Date): string {
  */
 export function roundNumber(num: number): number {
     // 請在此處寫下你的程式碼
+    return Math.round(num)
 }

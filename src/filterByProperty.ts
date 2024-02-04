@@ -10,8 +10,11 @@
  * @param value - 要過濾的屬性值
  * @returns - 回傳過濾後的陣列
  */
-export function filterByProperty(){
-    // 請在此處寫下你的程式碼
+export function filterByProperty<T, K extends keyof T>(arr: T[], key: K, value: T[K]): T[] {
+    // 請在此處寫下你的程式碼（T 是傳入陣列的泛型，設定 K 比須是 T 的 key）
+    return arr.filter((item) => {
+        return item[key] === value
+    })
 }
 
 

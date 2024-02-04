@@ -7,4 +7,6 @@
  */
 export function reverseString(str: string): string {
     // 在此實現函式
+    // 型別變化：string => string[] => string[] => string
+    return str.split('').reverse().join('')    
 }
